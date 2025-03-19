@@ -1,0 +1,184 @@
+
+wifi
+id: metacon
+pw: 19732023*
+
+
+
+3디 그래픽
+산업안전
+
+포토샵
+
+포토샵
+편집
+
+유니티 c#
+
+블렌더
+
+
+
+폴리텍사이트 로그인 및 사진 등록
+p.kopo.ac.kr/login.jsp
+
+
+
+
+
+
+-------------------
+
+# 월요일 3d 모델링
+
+# 
+Checker 표면으로 주전자 표면 UV로 분석
+
+
+## 레이아웃
+- Shading
+- UV Editing 
+
+
+블랜더는 max나 maya 와 다르게 projection 하게 되면 뷰포트 기반으로 모든걸 처리한다
+실린더로 만들었기때문에 실린더로 uv Editing 해보자
+
+UV - project from view 사용해서 일부 셀렉션 부분을 라벨로 적용 가능
+
+UVMap 에서 하나만 클릭하고 ctrl + L 시에 전체선택 가능
+
+ctrl + num+ 해서 선택범위 넓히면서 셀렉트하고 uv - project from view 해서 펼치기
+
+
+# 확장프로그램 설치
+edit - preference - get extensions
+
+# 찻잔 캡부분 UV 펼치기
+1. 선을 따서 우클릭 mark seam 처리
+2. UV - unwrap - confirmal
+
+마크 심을 활용해서 선을 적용하고 그 선대로 입체를 평면화 하는 작업
+
+# 쉐이딩작업 시작
+Metallic 금속속성
+Roughness 빛반사
+Normal 표면의 질감 (울퉁불퉁한 느낌)
+
+normal 에 bump 추가 (Strength 0.1)
+bump 의 height 에 noise Texture 추가 (Vector의 Scale값 10, Detail값 10)
+
+noise texture 의 vector 에 mapping 추가 (Scale 의 X값 500)
+mapping 의 vector 에 texture coordinate 추가
+
+얼굴의 주름이라든가 이런것으로 표현한다
+영화같은건 실제로 표현하기때문에 안쓰지만.
+
+이걸 이대로 올리면 컴포넌트 값이 전부 붙는게 아니라 Principled BSDF 값만 넘어간다. 다른 처리과정이 필요
+
+보통 플라스틱은 베이스색상 검은색으로
+
+
+프린시플, 범프, 노이즈 3개 컴포넌트는 기본적으로 질감표현에 사용
+
+
+-------------------
+# HDRI !!중요
+
+shading의 우측 하단 보면 쇠구슬 부분 hdri 라고 부름
+360카메라로 찍은 사진 이미지와 같다.
+지구본을 세계지도로 만든 느낌
+hdri 이미지 저장해보자
+샘플로 하나 저장 
+
+world 프로퍼티의 Environment Texture
+
+# 오후수업 - 테이블 만들기
+
+실린더를 얇게 원반으로 만들어서
+위 아래 면 만 shift 클릭 해서 양면 선택 후 단축키 I 로 원 크기를 줄이고
+우클릭 딜리트 해서 중앙을 비운다 두께는 0.05
+
+안쪽 선을 따라서 선택하고 우클릭 bridge edge loop 해서 새 면을 생성
+도넛모양
+
+모서리 4개를 선택해서 Bevel (ctrl + B) 모서리 둥글게 적용
+
+완료
+
+옵젝모드 - add - curve - bezier
+
+커브선을 R,G,S 를 이용해서 테이블 다리를 만들고
+
+Data 프로퍼티에서 깊이,몇각형인지 적용 후
+우클릭 convert to - mesh
+
+하단에 face - fill
+Bevel 로 모서리 둥그랗게 적용
+
+
+다리를 이제 4개로 복사
+Shift + D 로 복사 후 R 로 회전해서 복사 적용
+
+shift + R 반복행동
+
+
+아이소 메트릭
+인테리어, 익스테리어
+
+max, maya, 블렌더, 마블러스 디자이너, UV툴, 그외 잡다
+게임회사는 ZBrush 원탑이다
+
+
+# 이제 모델링 완성 재질 처리 필요
+alpha 로 투명도 0.5 
+transmission weight 0.5 
+프로퍼티에서 backface culling 전부 체크
+render method blended
+
+# edit - preference - System - nvidia 는 CUDA 로 체크 
+
+# 프로퍼티 render 에서 Render Engine 을 Cycle로 선택하고 Device 를 GPU 로 설정
+
+# bevel 적용할때 휠스크롤 사용하면 면 갯수 조정할수 있다.
+
+# 버드의 재해 분포
+1:10:30:600
+중상:경상:?:무상해
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
