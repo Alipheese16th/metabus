@@ -1,0 +1,127 @@
+# 오전 수업 illust
+
+
+ctrl + R 눈금자 모드
+
+ctrl + Y 아이소메트릭 모드
+
+
+
+
+
+
+글씨 디자인해보기
+
+텍스트 생성후 create outline
+
+각종 도구 활용해서 글씨 디자인 완성
+
+## 탬플릿 활용해보기
+adobe stock 에서 무료 템플릿 사용
+
+탬플릿 오픈 후 폰트 add
+
+Yellowtail Regular
+
+## !! illustrator 사용시 주의점
+effect 효과 (그림자라든가) 를 중복으로 줄수있기때문에 주의
+window - appearance 항목에서 관리하여 수정하는것을 권장
+
+# 수박바 만들기
+도형을 그리고
+effect - 3d and materials 에서 입체효과 및 재질 효과 적용 가능
+
+# 아이소메트릭
+effect - 3d and metarials
+isometric left 
+
+
+-----------------------------
+
+#오후 영상편집
+
+## 내 프로젝트 탭에서 각종 파일 관리
+new 로 컬러매트 추가해서 화면에 컬러 매트 적용 가능
+
+## Effect 탭에서 각종 이펙트 확인가능
+화면전환 시에는 video transitions 에서 사용
+
+## 이미지 effect controls 활용해서 시간대별 postion, scale, rotate 적용해서 애니메이션 만들기
+
+## 또한 mask 활용해서 가렸다 안보였다 가능. 이것도 범위 지정
+
+
+# 젤리커플 영상 편집 해보기
+window - text 
+captions 탭
+create captions from transcript (자막 자동 생성)
+language 는 한국어
+speaker 는 yes로
+만들면
+자막이 생성된다
+
+해당 자막 클립부분을 자르기 툴로 잘라서 자막을 끊어서 보여주거나 할수 있음
+
+오디오는 Effect 의 리소스들 보면 
+잡음제거에 가장 많이 사용하는
+- Multiband Compressor
+- Parametric Equalizer
+- DeNoise
+
+3가지로 잡음을 조절한다.
+
+클립을 우클릭해서 스피드를 조절하고 자르기가 가능
+
+
+
+
+
+
+
+*/*.mp4
+*/*.mp3
+*/*.exr
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
