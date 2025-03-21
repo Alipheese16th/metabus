@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\workspace\\meta\\MyCSharpApp\\MyCSharpApp.csproj",
+      "projectUniqueName": "D:\\workspace\\metabus\\MyCSharpApp\\MyCSharpApp.csproj",
       "projectName": "MyCSharpApp",
-      "projectPath": "D:\\workspace\\meta\\MyCSharpApp\\MyCSharpApp.csproj",
+      "projectPath": "D:\\workspace\\metabus\\MyCSharpApp\\MyCSharpApp.csproj",
       "packagesPath": "C:\\Users\\Metacon_75\\.nuget\\packages\\",
-      "outputPath": "D:\\workspace\\meta\\MyCSharpApp\\obj\\",
+      "outputPath": "D:\\workspace\\metabus\\MyCSharpApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Metacon_75\\AppData\\Roaming\\NuGet\\NuGet.Config",

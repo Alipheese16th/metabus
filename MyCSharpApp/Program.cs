@@ -1,5 +1,25 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-var a = 1;
-var b = 1;
-Console.WriteLine(a+b);
+﻿long input = long.Parse(Console.ReadLine());
+
+
+Console.WriteLine(input*input);
+
+Console.WriteLine(2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
