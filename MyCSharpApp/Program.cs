@@ -1,13 +1,13 @@
-﻿long input = long.Parse(Console.ReadLine());
+﻿// long input = long.Parse(Console.ReadLine());
 
 
-Console.WriteLine(input*input);
+// Console.WriteLine(input*input);
 
-Console.WriteLine(2);
-
-
+// Console.WriteLine(2);
 
 
+
+Console.WriteLine("Hello World");
 
 
 
