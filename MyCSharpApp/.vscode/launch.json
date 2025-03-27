@@ -5,20 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": ".NET Core Launch (console)",
-            "type": "coreclr",
+            "name": "Run with dotnet",
+            "type": "node",
             "request": "launch",
-            "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/net7.0/MyCSharpApp.dll",
-            "args": [],
+            "runtimeExecutable": "dotnet",
+            "runtimeArgs": ["run"],
             "cwd": "${workspaceFolder}",
-            "console": "integratedTerminal",
-            "stopAtEntry": false
-        },
-        {
-            "name": ".NET Core Attach",
-            "type": "coreclr",
-            "request": "attach"
+            "console": "integratedTerminal"
         }
     ]
 }
