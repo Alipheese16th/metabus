@@ -1,22 +1,20 @@
-﻿
-string[] input = Console.ReadLine().Split();
-
-int n = int.Parse(input[0]);
-int k = int.Parse(input[1]);
+﻿int n = int.Parse(Console.ReadLine());
 
 List<int> intList = new();
 
-string[] inputSecond = Console.ReadLine().Split();
-
-
 for (int i = 0; i < n; i++)
 {
-    intList.Add(int.Parse(inputSecond[i]));
+    intList.Add(int.Parse(Console.ReadLine()));
 }
 
-intList.Sort((a, b) => b.CompareTo(a));
+intList.Sort();
 
-Console.WriteLine(intList[k-1]);
+intList.ForEach(x => Console.WriteLine(x));
+
+
+
+
+
 
 
 
