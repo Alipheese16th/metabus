@@ -1,21 +1,36 @@
-﻿int n = int.Parse(Console.ReadLine());
+﻿StreamReader sr = new(Console.OpenStandardInput());
+StreamWriter sw = new(Console.OpenStandardOutput());
 
-List<int> intList = new();
-
-for (int i = 0; i < n; i++)
+try
 {
-    intList.Add(int.Parse(Console.ReadLine()));
+
+    int N = int.Parse(sr.ReadLine());
+
+    List<(int x, int y)> list = new();
+    // ValueTuple 타입의 리스트
+
+    for (int i = 0; i < N; i++)
+    {
+        string[] input = sr.ReadLine().Split();
+        list.Add((int.Parse(input[0]), int.Parse(input[1])));
+        
+    }
+
+    list.Sort();
+    // ValueTuple 은 기본적으로 Comparable 을 구현하고있음
+    
+    list.ForEach(item=>sw.WriteLine(item.x + " " + item.y));
+
+
+
+
 }
-
-intList.Sort();
-
-intList.ForEach(x => Console.WriteLine(x));
-
-
-
-
-
-
-
-
-
+catch (Exception ex)
+{
+    sw.WriteLine(ex.Message);
+}
+finally
+{
+    sr.Close();
+    sw.Close();
+}
