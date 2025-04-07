@@ -5,22 +5,22 @@ try
 {
 
     int N = int.Parse(sr.ReadLine());
-
-    List<(int y, int x)> list = new();
-    // ValueTuple 타입의 리스트
+    List<string> list = new List<string>();
 
     for (int i = 0; i < N; i++)
     {
-        string[] input = sr.ReadLine().Split();
-        list.Add((int.Parse(input[1]), int.Parse(input[0])));
-        
+        list.Add(sr.ReadLine());
     }
+    list = list.Distinct().ToList();
+    list.Sort((a, b) => {
+        if (a.Length == b.Length) {
+            return a.CompareTo(b);
+        } else {
+            return a.Length.CompareTo(b.Length);
+        }
+    });
 
-    list.Sort();
-    // ValueTuple 은 기본적으로 Comparable 을 구현하고있음
-    
-    list.ForEach(item=>sw.WriteLine(item.x + " " + item.y));
-
+    list.ForEach(sw.WriteLine);
 
 
 
