@@ -1,28 +1,24 @@
-﻿StreamReader sr = new(Console.OpenStandardInput());
+﻿
+
+StreamReader sr = new(Console.OpenStandardInput());
 StreamWriter sw = new(Console.OpenStandardOutput());
 
 try
 {
+   string input = sr.ReadLine() ?? "";
 
-    int N = int.Parse(sr.ReadLine());
-    List<string> list = new List<string>();
+    HashSet<string> map = new HashSet<string>();
 
-    for (int i = 0; i < N; i++)
+    for (int i = 1; i <= input.Length; i++) // 1 2 3 4 5
     {
-        list.Add(sr.ReadLine());
-    }
-    list = list.Distinct().ToList();
-    list.Sort((a, b) => {
-        if (a.Length == b.Length) {
-            return a.CompareTo(b);
-        } else {
-            return a.Length.CompareTo(b.Length);
+        for (int j = 0; j + i <= input.Length; j++) 
+        {
+            map.Add(input.Substring(j, i));
         }
-    });
+        
+    }
 
-    list.ForEach(sw.WriteLine);
-
-
+    sw.WriteLine(map.Count);
 
 }
 catch (Exception ex)
@@ -34,3 +30,5 @@ finally
     sr.Close();
     sw.Close();
 }
+
+
