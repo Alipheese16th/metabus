@@ -62,6 +62,7 @@
     <Analyzer Include="C:\Users\Metacon_75\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.1.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\02.Scripts\Button.cs" />
     <Compile Include="Assets\02.Scripts\TestScript.cs" />
   </ItemGroup>
   <ItemGroup>

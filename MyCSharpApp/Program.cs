@@ -5,20 +5,45 @@ StreamWriter sw = new(Console.OpenStandardOutput());
 
 try
 {
-   string input = sr.ReadLine() ?? "";
 
-    HashSet<string> map = new HashSet<string>();
+    int[] input = (sr.ReadLine() ?? "").Split().Select(x => int.Parse(x)).ToArray();
 
-    for (int i = 1; i <= input.Length; i++) // 1 2 3 4 5
-    {
-        for (int j = 0; j + i <= input.Length; j++) 
-        {
-            map.Add(input.Substring(j, i));
-        }
+    int a1 = input[0];
+    int b1 = input[1];
+
+    int[] input2 = (sr.ReadLine() ?? "").Split().Select(x => int.Parse(x)).ToArray();
+
+    int a2 = input2[0];
+    int b2 = input2[1];
+
+    int resultA;
+    int resultB;
+
+    if (b1 != b2) {
+
+        int sumA = a1*b2 + a2*b1;
+        int gcd = findGCD(sumA, b1*b2);
+
+        resultA = sumA/gcd;
+        resultB = b1*b2/gcd;
         
+    } else {
+
+        int sumA = a1 + a2;
+        int gcd = findGCD(sumA, b1);
+
+        resultA = sumA/gcd;
+        resultB = b1/gcd;
+
     }
 
-    sw.WriteLine(map.Count);
+    sw.WriteLine(resultA + " " + resultB);
+
+    int findGCD (int x, int y) {
+        return x%y == 0 ? y : findGCD(y, x%y);
+    }
+
+    
 
 }
 catch (Exception ex)
@@ -30,5 +55,3 @@ finally
     sr.Close();
     sw.Close();
 }
-
-
