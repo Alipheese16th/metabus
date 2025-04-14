@@ -6,43 +6,55 @@ StreamWriter sw = new(Console.OpenStandardOutput());
 try
 {
 
-    int[] input = (sr.ReadLine() ?? "").Split().Select(x => int.Parse(x)).ToArray();
+    int N = int.Parse(sr.ReadLine() ?? "");
 
-    int a1 = input[0];
-    int b1 = input[1];
+    for (int i = 0; i < N; i++)
+    {
+        long input = long.Parse(sr.ReadLine() ?? "");
 
-    int[] input2 = (sr.ReadLine() ?? "").Split().Select(x => int.Parse(x)).ToArray();
+        bool gcp = findSosu(input);
 
-    int a2 = input2[0];
-    int b2 = input2[1];
+        if (gcp) {
+            sw.WriteLine(input);
+        } else {
+            sw.WriteLine(lastSosu(input));
+        }
 
-    int resultA;
-    int resultB;
-
-    if (b1 != b2) {
-
-        int sumA = a1*b2 + a2*b1;
-        int gcd = findGCD(sumA, b1*b2);
-
-        resultA = sumA/gcd;
-        resultB = b1*b2/gcd;
-        
-    } else {
-
-        int sumA = a1 + a2;
-        int gcd = findGCD(sumA, b1);
-
-        resultA = sumA/gcd;
-        resultB = b1/gcd;
 
     }
 
-    sw.WriteLine(resultA + " " + resultB);
+    bool findSosu(long x) {
 
-    int findGCD (int x, int y) {
-        return x%y == 0 ? y : findGCD(y, x%y);
+        if (x <= 1) return false;
+        if (x <= 3) return true;
+        if (x % 2 == 0 || x % 3 == 0) return false;
+
+        for (long i = 5; i * i <= x; i += 6)
+        {
+            if (x % i == 0 || x % (i + 2) == 0) return false;
+        }
+
+        return true;
+
     }
 
+    long lastSosu(long x) {
+
+
+        while (true) {
+        x++;
+
+            if (findSosu(x)) {
+                return x;
+            }
+
+        }
+
+    }
+
+
+
+    
     
 
 }
