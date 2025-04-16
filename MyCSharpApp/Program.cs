@@ -6,55 +6,33 @@ StreamWriter sw = new(Console.OpenStandardOutput());
 try
 {
 
-    int N = int.Parse(sr.ReadLine() ?? "");
+    // 이번문제는 에라토스테네스의 채 공식을 사용하는 예제다.
+    // M ~ N 의 범위가 주어지면 해당 범위의 소수를 구하는 예제
 
-    for (int i = 0; i < N; i++)
+    int[] input = (sr.ReadLine() ?? "").Split().Select(int.Parse).ToArray();
+
+    int M = input[0];
+    int N = input[1];
+
+    bool[] isNotPrime = new bool[N+1]; // 기본 false 값으로 N까지의 index를 초기화
+
+    isNotPrime[0] = true; // 소수가 아님
+    isNotPrime[1] = true;
+
+    for (int i = 2; i*i <= N; i++) // 2부터 N의제곱근까지 (합성수는 N의제곱근이하까지는 무조건 약수가 존재하기때문에)
     {
-        long input = long.Parse(sr.ReadLine() ?? "");
-
-        bool gcp = findSosu(input);
-
-        if (gcp) {
-            sw.WriteLine(input);
-        } else {
-            sw.WriteLine(lastSosu(input));
-        }
-
-
-    }
-
-    bool findSosu(long x) {
-
-        if (x <= 1) return false;
-        if (x <= 3) return true;
-        if (x % 2 == 0 || x % 3 == 0) return false;
-
-        for (long i = 5; i * i <= x; i += 6)
+        for (int j = i*i; j <= N; j += i) // 약수의 배수들은 전부 소수가 아님
         {
-            if (x % i == 0 || x % (i + 2) == 0) return false;
+            isNotPrime[j] = true;
         }
-
-        return true;
-
     }
-
-    long lastSosu(long x) {
-
-
-        while (true) {
-        x++;
-
-            if (findSosu(x)) {
-                return x;
-            }
-
-        }
-
-    }
-
-
-
     
+    for (int i = M; i <= N; i++)
+    {
+        if (!isNotPrime[i])
+        sw.WriteLine(i);
+    }
+
     
 
 }
