@@ -1,3 +1,9 @@
 git pull origin main
-
-pause
+if errorlevel 1 (
+    echo ---------------Git Pull 실패---------------
+    pause
+    exit /b 1
+) else (
+    echo ---------------Git Pull 완료---------------
+    pause
+)
