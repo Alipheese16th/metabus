@@ -1,0 +1,63 @@
+
+
+unity mcp도 설치하려고했는데 
+유니티 2020.3 LTS 이상만 가능함..
+
+
+Script 'Packages/com.justinpbarnett.unity-mcp/Editor/Tools/ManageEditor.cs' 
+will not be compiled because it exists outside the Assets folder 
+and does not to belong to any assembly definition file.
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:
+TickCompilationPipeline 
+(UnityEditor.Scripting.ScriptCompilation.EditorScriptCompilationOptions,
+UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget)
+
+
+
+
+
+폴리텍 교수님 유니티버전은 2019.4.40f1 버전임
+
+
+
+
+
+
+# 게임 디자인 기초작업
+- 콘셉트 : 장르와 플레이 스타일을 포함한 큰 밑그림과 게임 디자인
+- 코어 메카닉 : 캐릭터가 할수 있는 플레이 기능이나 상호작용. 점프 슈팅 퍼즐 드라이빙
+- 제어 방식 : 캐릭터 환경 상호작용 기타 실행 가능한 동작을 제어하는 버튼 맵 키 맵
+- 스토리 : 게임 이야기 구조
+- 아트 스타일 : 게임 전반에 걸친 일관된 스타일과 느낌
+- 승패 조건 : 일반적으로 목표가 실패하도록 구성
+
+# 게임 디자인 문서
+- 게임디자인문서 : 게임 플레이 방법, 분위기, 스토리, 창작 경험
+- 기술디자인문서 : 하드웨어부터 클래스 및 프로그램 아키텍처
+- 원페이지 : 마케팅이나 프로모션에 사용, 게임의 스냅샷
+
+
+
+
+
+
+# 문제1. 사용자의 탄생년도를 입력 받아서 12간지를 출력하시오
+
+갑을병정무기경신임계 10
+자축인묘진사오미신유술해 12
+
+1984  갑자
+
+
+
+
+# 문제2. 임의의 2자리 정수를 7번 안에 맞추는 게임
+ex) 정답이 73 이면
+1. 첫번째 기회 : 입력값 25라면
+-> 입력한 값보다 큽니다
+
+
+
+
+
+
