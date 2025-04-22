@@ -6,9 +6,47 @@ StreamWriter sw = new(Console.OpenStandardOutput());
 try
 {
 
-    int N = int.Parse(sr.ReadLine() ?? "");
+    while (true) {
 
-    sw.WriteLine((int)Math.Sqrt(N));
+        string input = sr.ReadLine() ?? "";
+        if ("." == input) {
+            break;
+        }
+        string line = input.Substring(0, input.LastIndexOf('.'));
+        Stack<char> stack = new Stack<char>();
+        bool result = true;
+
+        foreach (var item in line)
+        {
+            if ('['.Equals(item) || '('.Equals(item)) {
+                stack.Push(item);
+            } else if (']'.Equals(item)) {
+                if (stack.Count == 0 || !'['.Equals(stack.Peek())) {
+                    result = false;
+                } else {
+                    stack.Pop();
+                }
+            } else if (')'.Equals(item)) {
+                if (stack.Count == 0 || !'('.Equals(stack.Peek())) {
+                    result = false;
+                } else {
+                    stack.Pop();
+                }
+            }
+
+        }
+
+        if (stack.Count != 0) {
+            result = false;
+        }
+
+        string comment = result ? "yes" : "no";
+        sw.WriteLine(comment);
+
+
+    }
+
+        
 
 
 }
