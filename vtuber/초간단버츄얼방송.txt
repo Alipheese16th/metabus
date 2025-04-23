@@ -1,0 +1,48 @@
+
+1. vroid studio 로 캐릭터 제작
+
+
+2. 폰으로 웹캠 대신 사용
+ pc와 컴 둘다 앱 설치
+
+- DroidCam https://www.dev47apps.com/
+ 폰에서 usb 디버깅 활성화 필요
+
+- 차선책 ivcam (단 드로이드캠이 추후 모션캡쳐 TDPT 랑 연동 잘됨) https://www.e2esoft.com/ivcam/
+
+
+3. 트래킹 툴 설치
+
+- TDPT (바디 트래킹) 설치https://digital-standard.booth.pm/items/3698596
+환경설정 - other - Send VMC Protocol 체크, Rot 체크 후 Port 번호 기억 (추후 연결)
+
+- VSeeFace (얼굴 트래킹) 설치https://www.vseeface.icu/
+환경설정 - OSC/VMC 에서 데이터받기 (트래킹 비활성화) 체크
+VSeeFace 트래킹 수신 체크
+표정 수신 체크
+얼굴 트래킹 체크
+
+
+- 차선책1 animaze by facerig (얼굴만 가능)
+
+- 차선책2 avakit 설치 (얼굴, 손 트래킹 가능)
+아.. 아바킷 25년5월3일부로 서비스 종료한단다.. 심지어 워터마크 너무 심해서 무료로는 사용이 불가능.
+
+
+4. obs 설치 https://obsproject.com/ko/download
+VSeeFace에서 가상 카메라 활성화 및 설치 되었다면 연동 가능
+비디오 연동
+방송 녹화 시작
+(유튜브 같은경우는 로그인만 하면 알아서 연동됨)
+
+
+
+
+
+
+
+
+
+
+
+
