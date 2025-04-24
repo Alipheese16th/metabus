@@ -12,17 +12,13 @@ public class TestScript : MonoBehaviour
     // List<char> first = new List<char>();
     // List<char> second = new List<char>();
 
-    public int chance = 7;
-    public int result;
+    // public int chance = 7;
+    // public int result;
 
     void Start()
     {
         // TextDisplay(CheckTime());
         // TextDisplay("오늘이 화요일이냐 ? " + (DayOfWeek.Tuesday == System.DateTime.Now.DayOfWeek));
-        if (inputFieldObject != null)
-        {
-            inputField = inputFieldObject.GetComponent<InputField>();
-        }
 
         // product.Add("apple");
         // product.Add("Carrot");
@@ -84,50 +80,70 @@ public class TestScript : MonoBehaviour
         // second.Add('술');
         // second.Add('해');
 
-        result = Random.Range(10, 100);
+        // if (inputFieldObject != null)
+        //     inputField = inputFieldObject.GetComponent<InputField>();
 
+        // result = Random.Range(10, 100);
 
 
     }
+
+    
 
     void Update()
     {
-
-        if (inputField != null && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)))
-        {
-            string inputText = inputField.text;
-            InputNum(inputText);
-        }
+        // if (inputField != null && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))) {
+        //     string inputText = inputField.text;
+        //     bool tmp = int.TryParse(inputText, out int num);
+        //     if (tmp) {
+        //         Ex2(num);
+        //     } else {
+        //         TextDisplay("숫자를 입력하세요");
+        //     }
+        // }
         
     }
 
-    void Ex2 (int num) {
+    // void Ex2 (int num) {
 
-        if (num > result) {
-            chance--;
-            TextDisplay("입력한 값("+ num +")보다 작습니다. 남은 기회 : " + chance);
-        } else if (num < result) {
-            chance--;
-            TextDisplay("입력한 값("+ num +")보다 큽큽니다. 남은 기회 : " + chance);
-        } else {
-            TextDisplay("정답입니다 :" + result);
-        }
+    //     if (num > result) {
+    //         chance--;
+    //         TextDisplay("입력한 값("+ num +")보다 작습니다. 남은 기회 : " + chance);
+    //     } else if (num < result) {
+    //         chance--;
+    //         TextDisplay("입력한 값("+ num +")보다 큽니다. 남은 기회 : " + chance);
+    //     } else {
+    //         TextDisplay("정답입니다 :" + result);
+    //         ExitGame();
+    //     }
 
-        if (chance == 0) {
-            TextDisplay("실패입니다 정답은 :" + result);
-        }
+    //     if (chance == 0) {
+    //         TextDisplay("실패입니다 정답은 :" + result);
+    //         ExitGame();
+    //     }
 
-    }
-    public void InputNum(string input) {
-        bool tmp = int.TryParse(input, out int num);
-        if (tmp) {
-            Ex2(num);
-        } else {
-            TextDisplay("숫자를 입력하세요");
-        }
+    // }
+    public void TextDisplay(string msg) {
+        Debug.Log(msg);
     }
 
+    //     public void ExitGame()
+    // {
+    //     #if UNITY_EDITOR
+    //             UnityEditor.EditorApplication.isPlaying = false;
+    //     #else
+    //             Application.Quit(); // 어플리케이션 종료
+    //     #endif
+    // }
 
+    // public void InputNum(string input) {
+    //     bool tmp = int.TryParse(input, out int num);
+    //     if (tmp) {
+    //         Ex2(num);
+    //     } else {
+    //         TextDisplay("숫자를 입력하세요");
+    //     }
+    // }
 
 
     // void Ganzi(int num) {
@@ -180,16 +196,9 @@ public class TestScript : MonoBehaviour
     //     }
     // }
 
-    public void TextDisplay(string msg) {
-
-        Debug.Log(msg);
-
-    }
-
     // public void ButtonClick(string msg) {
     //     Debug.Log(msg);
     // }
-
 
 
     public string CheckTime() {
