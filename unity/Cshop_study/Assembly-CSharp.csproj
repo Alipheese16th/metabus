@@ -68,6 +68,7 @@
     <Compile Include="Assets\02.Scripts\ItemBehavior.cs" />
     <Compile Include="Assets\02.Scripts\Player.cs" />
     <Compile Include="Assets\02.Scripts\TestScript.cs" />
+    <Compile Include="Assets\02.Scripts\testtest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
