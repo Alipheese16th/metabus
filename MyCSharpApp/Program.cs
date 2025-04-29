@@ -6,47 +6,39 @@ StreamWriter sw = new(Console.OpenStandardOutput());
 try
 {
 
-    while (true) {
-
-        string input = sr.ReadLine() ?? "";
-        if ("." == input) {
-            break;
-        }
-        string line = input.Substring(0, input.LastIndexOf('.'));
-        Stack<char> stack = new Stack<char>();
-        bool result = true;
-
-        foreach (var item in line)
-        {
-            if ('['.Equals(item) || '('.Equals(item)) {
-                stack.Push(item);
-            } else if (']'.Equals(item)) {
-                if (stack.Count == 0 || !'['.Equals(stack.Peek())) {
-                    result = false;
-                } else {
-                    stack.Pop();
-                }
-            } else if (')'.Equals(item)) {
-                if (stack.Count == 0 || !'('.Equals(stack.Peek())) {
-                    result = false;
-                } else {
-                    stack.Pop();
-                }
-            }
-
-        }
-
-        if (stack.Count != 0) {
-            result = false;
-        }
-
-        string comment = result ? "yes" : "no";
-        sw.WriteLine(comment);
-
-
+    if (!int.TryParse(sr.ReadLine() ?? "", out int N)) {
+        Console.WriteLine("숫자만 입력하세요오오");
+        Environment.Exit(0);
     }
 
+    Stack<int> stack = new Stack<int>();
+    int nextInt = 1;
+
+    int[] list = (sr.ReadLine() ?? "").Split().Select(int.Parse).ToArray();
+
+    foreach (var item in list)
+    {
+        if (item == nextInt) {
+            nextInt++;
+        } else {
+            stack.Push(item);
+        }
+
+        while (stack.Count > 0 && stack.Peek() == nextInt) {
+            stack.Pop();
+            nextInt++;
+        }
         
+    }
+    
+    while (stack.Count > 0 && stack.Peek() == nextInt) {
+        stack.Pop();
+        nextInt++;
+    }
+
+    string result = nextInt == N + 1 ? "Nice" : "Sad";
+    Console.WriteLine(result);
+
 
 
 }
