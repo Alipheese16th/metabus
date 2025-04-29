@@ -20,6 +20,7 @@ public class testtest : MonoBehaviour
 
         dele111 -= dele11; // 빼면 그 함수는 실행안됨
         dele111 -= dele11;
+        
         dele111();
 
 
