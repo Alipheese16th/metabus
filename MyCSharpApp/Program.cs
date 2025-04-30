@@ -11,33 +11,31 @@ try
         Environment.Exit(0);
     }
 
-    Stack<int> stack = new Stack<int>();
-    int nextInt = 1;
+    Queue<int> que = new Queue<int>();
 
-    int[] list = (sr.ReadLine() ?? "").Split().Select(int.Parse).ToArray();
-
-    foreach (var item in list)
+    for (int i = 0; i < N; i++)
     {
-        if (item == nextInt) {
-            nextInt++;
-        } else {
-            stack.Push(item);
+        string[] input = (sr.ReadLine() ?? "").Split();
+        string keyword = input[0];
+        switch (keyword)
+        {
+            case "push":
+            break;
+            case "pop":
+            break;
+            case "size":
+            break;
+            case "empty":
+            break;
+            case "front":
+            break;
+            case "back":
+            break;
         }
 
-        while (stack.Count > 0 && stack.Peek() == nextInt) {
-            stack.Pop();
-            nextInt++;
-        }
-        
-    }
-    
-    while (stack.Count > 0 && stack.Peek() == nextInt) {
-        stack.Pop();
-        nextInt++;
+
     }
 
-    string result = nextInt == N + 1 ? "Nice" : "Sad";
-    Console.WriteLine(result);
 
 
 
