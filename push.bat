@@ -6,7 +6,6 @@ if errorlevel 1 (
     exit /b 1
 ) else (
     echo --------------- Git Add SUCCES ---------------
-    pause
 )
 
 git commit -m "Git Push %date% %time%"
@@ -16,7 +15,6 @@ if errorlevel 1 (
     exit /b 1
 ) else (
     echo --------------- Git Commit SUCCES ---------------
-    pause
 )
 
 git push -u origin main
