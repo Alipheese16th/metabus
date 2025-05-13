@@ -1,10 +1,50 @@
 ----------------------------할일 정리 문서------------------
 
+
+
+1 2 3 4 5
+
+처음 1번 풍선은 무조건 터트림
+
+2 3 4 5
+
+다음 명령어
+
+양수면 왼쪽거부터 빼고 오른쪽에 집어넣음
+
+음수면 오른쪽거빼고 왼쪽에 집어넣음
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+오늘 할거
+- ppt도 어느정도 제작
+- 코테
+
+
+# 블렌더
+세구 옷입히기
+
+# 지브러시
+블렌더로 푯말 만들고 uv 펴기
+
+
+
+
 # 김진성교수님 언급 - 쉐이프키 공부 필요하다
 
 
-
- 동형씨 문서 카카오톡받은폴더에있나?
 
 # 잡코리아 양식
 1. 경력기술서 다듬기 (사진참조 원상이카톡 1 2)
@@ -149,3 +189,26 @@ https://centuruk.upaper.kr/view/6577330
 
 메타콘3d
 https://sites.google.com/view/metacon3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------
+패러블 https://www.jobkorea.co.kr/Recruit/Co_Read/Recruit/C/44611017
+(주)스콘 https://www.jobkorea.co.kr/Recruit/GI_Read/46945994?Oem_Code=C1&PageGbn=ST
+오르빗엔터테이먼트 https://www.gamejob.co.kr/List_GI/GIB_Read.asp?GI_No=257781
+(주)크리에이터버스 https://www.gamejob.co.kr/List_GI/GIB_Read.asp?GI_No=192217
+아카이브 https://cafe.naver.com/godanssity
+플랜비 https://cafe.naver.com/bver99
+
+
