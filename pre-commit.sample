@@ -1,0 +1,44 @@
+#!/bin/sh
+
+# 2025-04-15 파일용량 커밋 제한 로직 추가
+# 포토샵 예제 100메가 넘는거 올렸다가 깃 터졌네 아
+# 기준 크기: 100MB
+
+echo "Pre-commit hook executed"
+
+MAX_SIZE=$((100 * 1024 * 1024))  # bytes 단위
+
+# 변경 예정인 파일 목록 (staged 상태 기준)
+FILES=$(git diff --cached --name-only)
+
+LARGE_FILES=""
+
+for FILE in $FILES; do
+    # 파일 존재 여부 확인 (삭제된 파일이나 디렉토리는 제외)
+    if [ -f "$FILE" ]; then
+        # 파일 크기 확인
+        FILE_SIZE=$(stat -c%s "$FILE" 2>/dev/null)
+
+        # 만약 Git Bash에서 stat -c%s 가 안 될 경우, 아래 대체 사용 및 출력값 처리
+        if [ -z "$FILE_SIZE" ]; then
+            FILE_SIZE=$(wc -c < "$FILE" | awk '{print $1}')
+        fi
+
+        ## echo "파일: $FILE, 크기 (바이트): $FILE_SIZE" # 디버깅 로깅
+
+        # 크기 비교
+        if [ "$FILE_SIZE" -gt "$MAX_SIZE" ]; then
+            FILE_HSIZE=$(du -h "$FILE" | cut -f1)
+            LARGE_FILES+="$FILE ($FILE_HSIZE)\n"
+			echo "문제 파일: $FILE, 크기 (바이트): $FILE_SIZE"
+        fi
+    fi
+done
+
+if [ -n "$LARGE_FILES" ]; then
+    echo "❌ 커밋하려는 파일 중 100MB 초과 파일이 있습니다:"
+    echo -e "$LARGE_FILES"
+    echo "▶ 커밋을 중단합니다. 해당 파일은 .gitignore에 추가하거나 제외해 주세요."
+    exit 1
+fi
+
