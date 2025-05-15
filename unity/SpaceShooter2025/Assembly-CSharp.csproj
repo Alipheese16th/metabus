@@ -56,6 +56,7 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\02.Scripts\FollowCam.cs" />
     <Compile Include="Assets\02.Scripts\PlayerCtrl.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -622,6 +623,10 @@
       <Project>{4947A864-9965-462B-5656-69F377B6C172}</Project>
       <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Cursor.Editor.csproj">
+      <Project>{6D71AC9F-185C-B2BE-F89C-CEFE91A2C580}</Project>
+      <Name>Unity.Cursor.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
       <Project>{8E2FEFE7-6D8E-C0D0-2D10-9BB20CD2C4FC}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
@@ -637,10 +642,6 @@
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{08747D1E-761A-FA8F-A134-701B73B8D057}</Project>
       <Name>UnityEditor.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Cursor.Editor.csproj">
-      <Project>{6D71AC9F-185C-B2BE-F89C-CEFE91A2C580}</Project>
-      <Name>Unity.Cursor.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

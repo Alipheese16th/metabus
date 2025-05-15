@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\workspace\\metabus\\unity\\SpaceShooter2025\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AF88743F-9E1D-61F6-843A-AB5DCB4E2B82}|Assembly-CSharp.csproj|d:\\workspace\\metabus\\unity\\spaceshooter2025\\assets\\02.scripts\\followcam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF88743F-9E1D-61F6-843A-AB5DCB4E2B82}|Assembly-CSharp.csproj|solutionrelative:assets\\02.scripts\\followcam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AF88743F-9E1D-61F6-843A-AB5DCB4E2B82}|Assembly-CSharp.csproj|d:\\workspace\\metabus\\unity\\spaceshooter2025\\assets\\02.scripts\\playerctrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AF88743F-9E1D-61F6-843A-AB5DCB4E2B82}|Assembly-CSharp.csproj|solutionrelative:assets\\02.scripts\\playerctrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,12 +23,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FollowCam.cs",
+              "DocumentMoniker": "D:\\workspace\\metabus\\unity\\SpaceShooter2025\\Assets\\02.Scripts\\FollowCam.cs",
+              "RelativeDocumentMoniker": "Assets\\02.Scripts\\FollowCam.cs",
+              "ToolTip": "D:\\workspace\\metabus\\unity\\SpaceShooter2025\\Assets\\02.Scripts\\FollowCam.cs",
+              "RelativeToolTip": "Assets\\02.Scripts\\FollowCam.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T02:41:57.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "PlayerCtrl.cs",
               "DocumentMoniker": "D:\\workspace\\metabus\\unity\\SpaceShooter2025\\Assets\\02.Scripts\\PlayerCtrl.cs",
               "RelativeDocumentMoniker": "Assets\\02.Scripts\\PlayerCtrl.cs",
               "ToolTip": "D:\\workspace\\metabus\\unity\\SpaceShooter2025\\Assets\\02.Scripts\\PlayerCtrl.cs",
               "RelativeToolTip": "Assets\\02.Scripts\\PlayerCtrl.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwD4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-09T06:10:22.204Z",
               "EditorCaption": ""
