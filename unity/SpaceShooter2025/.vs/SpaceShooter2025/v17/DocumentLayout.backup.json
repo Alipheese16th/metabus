@@ -3,7 +3,27 @@
   "WorkspaceRootPath": "D:\\workspace\\metabus\\unity\\SpaceShooter2025\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AF88743F-9E1D-61F6-843A-AB5DCB4E2B82}|Assembly-CSharp.csproj|d:\\workspace\\metabus\\unity\\spaceshooter2025\\assets\\02.scripts\\playerctrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AF88743F-9E1D-61F6-843A-AB5DCB4E2B82}|Assembly-CSharp.csproj|d:\\workspace\\metabus\\unity\\spaceshooter2025\\assets\\02.scripts\\removebullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF88743F-9E1D-61F6-843A-AB5DCB4E2B82}|Assembly-CSharp.csproj|solutionrelative:assets\\02.scripts\\removebullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF88743F-9E1D-61F6-843A-AB5DCB4E2B82}|Assembly-CSharp.csproj|D:\\workspace\\metabus\\unity\\SpaceShooter2025\\assets\\02.scripts\\firectrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF88743F-9E1D-61F6-843A-AB5DCB4E2B82}|Assembly-CSharp.csproj|solutionrelative:assets\\02.scripts\\firectrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF88743F-9E1D-61F6-843A-AB5DCB4E2B82}|Assembly-CSharp.csproj|D:\\workspace\\metabus\\unity\\SpaceShooter2025\\assets\\02.scripts\\bulletctrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF88743F-9E1D-61F6-843A-AB5DCB4E2B82}|Assembly-CSharp.csproj|solutionrelative:assets\\02.scripts\\bulletctrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF88743F-9E1D-61F6-843A-AB5DCB4E2B82}|Assembly-CSharp.csproj|D:\\workspace\\metabus\\unity\\SpaceShooter2025\\assets\\02.scripts\\mygizmos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF88743F-9E1D-61F6-843A-AB5DCB4E2B82}|Assembly-CSharp.csproj|solutionrelative:assets\\02.scripts\\mygizmos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF88743F-9E1D-61F6-843A-AB5DCB4E2B82}|Assembly-CSharp.csproj|D:\\workspace\\metabus\\unity\\SpaceShooter2025\\assets\\02.scripts\\followcam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF88743F-9E1D-61F6-843A-AB5DCB4E2B82}|Assembly-CSharp.csproj|solutionrelative:assets\\02.scripts\\followcam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF88743F-9E1D-61F6-843A-AB5DCB4E2B82}|Assembly-CSharp.csproj|D:\\workspace\\metabus\\unity\\SpaceShooter2025\\assets\\02.scripts\\playerctrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AF88743F-9E1D-61F6-843A-AB5DCB4E2B82}|Assembly-CSharp.csproj|solutionrelative:assets\\02.scripts\\playerctrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -19,15 +39,75 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "RemoveBullet.cs",
+              "DocumentMoniker": "D:\\workspace\\metabus\\unity\\SpaceShooter2025\\Assets\\02.Scripts\\RemoveBullet.cs",
+              "RelativeDocumentMoniker": "Assets\\02.Scripts\\RemoveBullet.cs",
+              "ToolTip": "D:\\workspace\\metabus\\unity\\SpaceShooter2025\\Assets\\02.Scripts\\RemoveBullet.cs",
+              "RelativeToolTip": "Assets\\02.Scripts\\RemoveBullet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T04:43:47.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FireCtrl.cs",
+              "DocumentMoniker": "D:\\workspace\\metabus\\unity\\SpaceShooter2025\\Assets\\02.Scripts\\FireCtrl.cs",
+              "RelativeDocumentMoniker": "Assets\\02.Scripts\\FireCtrl.cs",
+              "ToolTip": "D:\\workspace\\metabus\\unity\\SpaceShooter2025\\Assets\\02.Scripts\\FireCtrl.cs",
+              "RelativeToolTip": "Assets\\02.Scripts\\FireCtrl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T02:42:19.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MyGizmos.cs",
+              "DocumentMoniker": "D:\\workspace\\metabus\\unity\\SpaceShooter2025\\Assets\\02.Scripts\\MyGizmos.cs",
+              "RelativeDocumentMoniker": "Assets\\02.Scripts\\MyGizmos.cs",
+              "ToolTip": "D:\\workspace\\metabus\\unity\\SpaceShooter2025\\Assets\\02.Scripts\\MyGizmos.cs",
+              "RelativeToolTip": "Assets\\02.Scripts\\MyGizmos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T02:37:36.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BulletCtrl.cs",
+              "DocumentMoniker": "D:\\workspace\\metabus\\unity\\SpaceShooter2025\\Assets\\02.Scripts\\BulletCtrl.cs",
+              "RelativeDocumentMoniker": "Assets\\02.Scripts\\BulletCtrl.cs",
+              "ToolTip": "D:\\workspace\\metabus\\unity\\SpaceShooter2025\\Assets\\02.Scripts\\BulletCtrl.cs",
+              "RelativeToolTip": "Assets\\02.Scripts\\BulletCtrl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T01:52:47.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FollowCam.cs",
+              "DocumentMoniker": "D:\\workspace\\metabus\\unity\\SpaceShooter2025\\Assets\\02.Scripts\\FollowCam.cs",
+              "RelativeDocumentMoniker": "Assets\\02.Scripts\\FollowCam.cs",
+              "ToolTip": "D:\\workspace\\metabus\\unity\\SpaceShooter2025\\Assets\\02.Scripts\\FollowCam.cs",
+              "RelativeToolTip": "Assets\\02.Scripts\\FollowCam.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T02:41:57.678Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "PlayerCtrl.cs",
               "DocumentMoniker": "D:\\workspace\\metabus\\unity\\SpaceShooter2025\\Assets\\02.Scripts\\PlayerCtrl.cs",
               "RelativeDocumentMoniker": "Assets\\02.Scripts\\PlayerCtrl.cs",
               "ToolTip": "D:\\workspace\\metabus\\unity\\SpaceShooter2025\\Assets\\02.Scripts\\PlayerCtrl.cs",
               "RelativeToolTip": "Assets\\02.Scripts\\PlayerCtrl.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwFUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T06:10:22.204Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T06:10:22.204Z"
             }
           ]
         }

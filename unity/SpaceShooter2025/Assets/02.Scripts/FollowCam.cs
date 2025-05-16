@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class FollowCam : MonoBehaviour
 {
@@ -14,13 +13,10 @@ public class FollowCam : MonoBehaviour
     //public float smoothTime = 0.2f;
     //private Vector3 velocity = Vector3.zero;
 
-
-    // Start is called before the first frame update
     void Start()
     {
     }
 
-    // Update is called once per frame
     void LateUpdate()
     {
         var camPos = target.position - (target.forward * distance) + (target.up * height); // 카메라 위치값 구함
