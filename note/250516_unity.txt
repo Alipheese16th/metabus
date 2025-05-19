@@ -227,3 +227,5 @@ private void ShowEffect(Collision collision)
 
 
 
+초당10발로 나가게 하기
+
