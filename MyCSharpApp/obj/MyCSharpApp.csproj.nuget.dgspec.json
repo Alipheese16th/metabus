@@ -10,14 +10,14 @@
         "projectUniqueName": "D:\\workspace\\metabus\\MyCSharpApp\\MyCSharpApp.csproj",
         "projectName": "MyCSharpApp",
         "projectPath": "D:\\workspace\\metabus\\MyCSharpApp\\MyCSharpApp.csproj",
-        "packagesPath": "C:\\Users\\Metacon_94\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Metacon_75\\.nuget\\packages\\",
         "outputPath": "D:\\workspace\\metabus\\MyCSharpApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Metacon_94\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Metacon_75\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

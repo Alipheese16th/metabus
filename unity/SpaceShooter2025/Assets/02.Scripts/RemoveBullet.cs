@@ -20,6 +20,7 @@ public class RemoveBullet : MonoBehaviour
     {
         ContactPoint contact = collision.contacts[0];
         Quaternion rotation = Quaternion.FromToRotation(-Vector3.forward, contact.normal);
-        Instantiate(sparkEffect, contact.point, rotation);
+        GameObject effect = Instantiate(sparkEffect, contact.point, rotation);
+        effect.transform.parent = transform;
     }
 }

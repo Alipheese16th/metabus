@@ -226,6 +226,5 @@ private void ShowEffect(Collision collision)
 
 
 
-
-초당10발로 나가게 하기
+다음시간까지 초당10발로 나가게 하기
 
