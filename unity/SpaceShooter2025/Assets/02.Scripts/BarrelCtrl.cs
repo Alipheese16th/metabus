@@ -20,41 +20,68 @@ public class BarrelCtrl : MonoBehaviour
     private bool expChk = false;
 
 
+    private AudioSource _audio;
+    public AudioClip clip;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         mf = GetComponent<MeshFilter>();
         mr = GetComponent<MeshRenderer>();
+        _audio = GetComponent<AudioSource>();
 
         // 마지막 텍스쳐 제외하고 랜덤 텍스쳐 적용
-        mr.material.mainTexture = textures[Random.Range(0, textures.Length - 1)];
+        mr.material.mainTexture = textures[Random.Range(0, textures.Length - 2)];
 
     }
     private void OnCollisionEnter(Collision collision)
     {
         // 총알 맞았을경우
-        if (collision.collider.CompareTag("BULLET"))
+        if (collision.collider.CompareTag("BULLET") && !expChk) {
+            hitCount++;
+            BarrelChk();
+
+            //if (++hitCount == 2) {
+            //    // 연기 이펙트 생성
+            //    GameObject smoke = Instantiate(smokeEffect, firePivot.position, Quaternion.identity);
+            //    smoke.transform.parent = firePivot;
+            //} else if (hitCount == 3) {
+            //    // 불 이펙트 생성
+            //    GameObject fire = Instantiate(fireEffect, firePivot.position, Quaternion.identity);
+            //    fire.transform.parent = firePivot;
+            //    mr.material.mainTexture = textures[textures.Length - 2];
+            //    // 3초뒤 폭발
+            //    Invoke("ExpBarrel", Random.Range(3f, 9f));
+            //} else if (hitCount == 5) {
+            //    // 즉시 폭발
+            //    ExpBarrel();
+            //}
+
+
+        }
+    }
+
+    private void BarrelChk()
+    {
+        switch (hitCount)
         {
-            if (++hitCount == 1)
-            {
+            case 2:
                 // 연기 이펙트 생성
                 GameObject smoke = Instantiate(smokeEffect, firePivot.position, Quaternion.identity);
                 smoke.transform.parent = firePivot;
-            }
-            if (hitCount == 2) {
+                break;
+            case 3:
                 // 불 이펙트 생성
                 GameObject fire = Instantiate(fireEffect, firePivot.position, Quaternion.identity);
                 fire.transform.parent = firePivot;
-            }
-            else if (hitCount == 3) {
+                mr.material.mainTexture = textures[textures.Length - 2];
                 // 3초뒤 폭발
-                Invoke("ExpBarrel", 3f);
-            }
-            else if (hitCount == 5)
-            {
+                Invoke("ExpBarrel", Random.Range(3f, 9f));
+                break;
+            case 5:
                 // 즉시 폭발
                 ExpBarrel();
-            }
+                break;
         }
     }
 
@@ -86,10 +113,18 @@ public class BarrelCtrl : MonoBehaviour
         // 모양 바꾸기
         ChangeShape();
 
+        // 폭발사운드
+        ExpSound();
+
         // 색상 바꾸기
         //ChangeColor();
 
 
+    }
+
+    private void ExpSound()
+    {
+        _audio.PlayOneShot(clip, 3f);
     }
 
     private void IndirectDamage(Vector3 pos)
@@ -106,7 +141,11 @@ public class BarrelCtrl : MonoBehaviour
 
             BarrelCtrl barrelCtrl = item.GetComponent<BarrelCtrl>();
             if (!barrelCtrl.expChk)
-            barrelCtrl.ExpBarrelChild();
+            {
+                barrelCtrl.hitCount = 3;
+                barrelCtrl.BarrelChk();
+            }
+            //barrelCtrl.ExpBarrelChild();
         }
 
     }
@@ -121,8 +160,7 @@ public class BarrelCtrl : MonoBehaviour
         fire.transform.parent = firePivot;
 
         // 난수 생성후 3~9초 후 폭발
-        int countDown = Random.Range(3, 10);
-        // 3초뒤 폭발
+        float countDown = Random.Range(3f, 9f);
         Invoke("ExpBarrel", countDown);
 
     }

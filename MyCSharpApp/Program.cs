@@ -4,31 +4,26 @@ StreamWriter sw = new(Console.OpenStandardOutput());
 
 
 int N = int.Parse(sr.ReadLine() ?? "");
-HashSet<string> set = new HashSet<string>();
-int result = 0;
+Dictionary<int, int> map = new Dictionary<int, int>();
 
-for (int i = 0; i < N; i++)
-{
-    string input = sr.ReadLine() ?? "";
 
-    if ("ENTER".Equals(input))
-    {
-        result += set.Count;
-        set.Clear();
-    }
-    else
-    {
-        set.Add(input);
+for (int i = 0; i < N; i++) {
+    int input = int.Parse(sr.ReadLine() ?? "");
+
+    if (map.ContainsKey(input)) {
+        map[input]++;
+    } else {
+        map[input] = 1;
     }
 
 }
-result += set.Count;
 
-sw.Write(result);
+List<int> list = map.SelectMany(pair => Enumerable.Repeat(pair.Key, pair.Value)).ToList();
+list.Sort();
 
-
-
-
+int result1 = (int)Math.Round(list.Average());
+int result2 = list[list.Count / 2 + 1];
+List<int> result3List = map.Where(pair => pair.Value == map.Values.Max()).OrderBy(n => n).ToList();
 
 
 

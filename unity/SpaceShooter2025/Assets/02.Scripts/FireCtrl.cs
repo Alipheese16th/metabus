@@ -6,16 +6,30 @@ public class FireCtrl : MonoBehaviour
 {
     public GameObject bullet;
     public Transform firePos;
-    public ParticleSystem cartridge; // 정적 연결
-
-    private ParticleSystem muzzleFlash;
-
+    public ParticleSystem cartridge; // 장전 이펙트 정적 연결
+    private ParticleSystem muzzleFlash; // 발사 이펙트
     public float fireDelay = 0.1f; // 초당 10발 (1초 / 10 = 0.1초)
     private float nextFireTime = 0f;
+
+    [System.Serializable]
+    public struct PlayerSFX
+    {
+        public AudioClip[] fire;
+        public AudioClip[] reload;
+    }
+    public PlayerSFX playerSFX;
+    private AudioSource _audio;
+
+    public enum WeaponType
+    {
+        RIFLE, SHOTGUN
+    }
+    public WeaponType currWeapon = WeaponType.RIFLE;
 
     void Start()
     {
         muzzleFlash = firePos.GetComponentInChildren<ParticleSystem>();
+        _audio = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -38,5 +52,14 @@ public class FireCtrl : MonoBehaviour
 
         // 장전 이펙트 생성
         cartridge.Play();
+
+        FireSFX();
     }
+
+    private void FireSFX()
+    {
+        var _sfx = playerSFX.fire[(int)currWeapon];
+        _audio.PlayOneShot(_sfx, 1f);
+    }
+
 }
