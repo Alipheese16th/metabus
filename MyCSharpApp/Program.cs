@@ -22,10 +22,15 @@ List<int> list = map.SelectMany(pair => Enumerable.Repeat(pair.Key, pair.Value))
 list.Sort();
 
 int result1 = (int)Math.Round(list.Average());
-int result2 = list[list.Count / 2 + 1];
-List<int> result3List = map.Where(pair => pair.Value == map.Values.Max()).OrderBy(n => n).ToList();
+int result2 = list[list.Count / 2];
+List<int> result3List = map.Where(pair => pair.Value == map.Values.Max()).Select(pair => pair.Key).OrderBy(n => n).ToList();
+int result3 = result3List.Count > 1 ? result3List[1] : result3List[0];
+int result4 = list.Max() - list.Min();
 
-
+sw.WriteLine(result1);
+sw.WriteLine(result2);
+sw.WriteLine(result3);
+sw.WriteLine(result4);
 
 sr.Close();
 sw.Close();
