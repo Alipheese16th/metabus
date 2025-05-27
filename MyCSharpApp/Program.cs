@@ -3,34 +3,33 @@ StreamReader sr = new(Console.OpenStandardInput());
 StreamWriter sw = new(Console.OpenStandardOutput());
 
 
-int N = int.Parse(sr.ReadLine() ?? "");
-Dictionary<int, int> map = new Dictionary<int, int>();
+int[] input = (sr.ReadLine() ?? "").Split().Select(int.Parse).ToArray();
+int N = input[0];
+int M = input[1];
 
+Dictionary<string, int> map = new Dictionary<string, int>();
 
-for (int i = 0; i < N; i++) {
-    int input = int.Parse(sr.ReadLine() ?? "");
+for (int i = 0; i < N; i++)
+{
+    string word = sr.ReadLine() ?? "";
 
-    if (map.ContainsKey(input)) {
-        map[input]++;
+    if (map.ContainsKey(word)) {
+        map[word]++;
     } else {
-        map[input] = 1;
+        map[word] = 1;
     }
 
 }
 
-List<int> list = map.SelectMany(pair => Enumerable.Repeat(pair.Key, pair.Value)).ToList();
-list.Sort();
+List<string> list = map.Where(x => x.Key.Length >= M)
+                       .OrderByDescending(x => x.Value)
+                       .ThenByDescending(x => x.Key.Length)
+                       .ThenBy(x => x.Key)
+                       .Select(x => x.Key)
+                       .ToList();
 
-int result1 = (int)Math.Round(list.Average());
-int result2 = list[list.Count / 2];
-List<int> result3List = map.Where(pair => pair.Value == map.Values.Max()).Select(pair => pair.Key).OrderBy(n => n).ToList();
-int result3 = result3List.Count > 1 ? result3List[1] : result3List[0];
-int result4 = list.Max() - list.Min();
+list.ForEach(sw.WriteLine);
 
-sw.WriteLine(result1);
-sw.WriteLine(result2);
-sw.WriteLine(result3);
-sw.WriteLine(result4);
 
 sr.Close();
 sw.Close();
