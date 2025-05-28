@@ -3,32 +3,21 @@ StreamReader sr = new(Console.OpenStandardInput());
 StreamWriter sw = new(Console.OpenStandardOutput());
 
 
-int[] input = (sr.ReadLine() ?? "").Split().Select(int.Parse).ToArray();
-int N = input[0];
-int M = input[1];
+int input = int.Parse(sr.ReadLine() ?? "");
 
-Dictionary<string, int> map = new Dictionary<string, int>();
+sw.WriteLine(fibonacci(input));
 
-for (int i = 0; i < N; i++)
-{
-    string word = sr.ReadLine() ?? "";
+int fibonacci(int N) {
 
-    if (map.ContainsKey(word)) {
-        map[word]++;
+    if (N == 1) {
+        return 1;
+
+    } else if (N <= 0) {
+        return 0;
     } else {
-        map[word] = 1;
+        return fibonacci(N-1) + fibonacci(N-2);
     }
-
 }
-
-List<string> list = map.Where(x => x.Key.Length >= M)
-                       .OrderByDescending(x => x.Value)
-                       .ThenByDescending(x => x.Key.Length)
-                       .ThenBy(x => x.Key)
-                       .Select(x => x.Key)
-                       .ToList();
-
-list.ForEach(sw.WriteLine);
 
 
 sr.Close();
