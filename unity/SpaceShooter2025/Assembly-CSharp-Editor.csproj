@@ -903,6 +903,18 @@
       <Project>{08747D1E-761A-FA8F-A134-701B73B8D057}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
+    <ProjectReference Include="PlayerAD.csproj">
+      <Project>{389422BA-C52F-D803-D471-4A21337304E6}</Project>
+      <Name>PlayerAD</Name>
+    </ProjectReference>
+    <ProjectReference Include="StageAD.csproj">
+      <Project>{3BDA7373-1446-49DD-0128-B5AFD0228779}</Project>
+      <Name>StageAD</Name>
+    </ProjectReference>
+    <ProjectReference Include="EnemyAD.csproj">
+      <Project>{AEAE764F-6D23-BD03-0FF8-15BC4727EAAE}</Project>
+      <Name>EnemyAD</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
