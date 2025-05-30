@@ -11,8 +11,11 @@ public class MoveAgent : MonoBehaviour
     public int nextIdx = 0;
 
     private NavMeshAgent agent;
+    private Transform enemyTr;
     private readonly float patrolSpeed = 1.5f;
     private const float traceSpeed = 4.0f;
+    private float damping;
+
     private bool _patrolling;
     public bool patrolling {  
         get { return _patrolling; } 
@@ -22,6 +25,7 @@ public class MoveAgent : MonoBehaviour
             if (_patrolling)
             {
                 agent.speed = patrolSpeed;
+                damping = 1f;
                 MoveWayPoint();
             }
         }
@@ -34,16 +38,24 @@ public class MoveAgent : MonoBehaviour
         set { 
             _traceTarget = value;
             agent.speed = traceSpeed;
+            damping = 7f;
             TraceTarget(_traceTarget);
         }
     }
 
+    public float speed {
+        get {
+            return agent.velocity.magnitude;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
+        enemyTr = transform;
         agent = GetComponent<NavMeshAgent>();
         agent.autoBraking = false;
+        agent.updateRotation = false;
 
         var group = GameObject.Find("WayPointGroup");
         if (group != null)
@@ -80,6 +92,11 @@ public class MoveAgent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!agent.isStopped)
+        {
+            Quaternion rot = Quaternion.LookRotation(agent.desiredVelocity);
+            enemyTr.rotation = Quaternion.Slerp(enemyTr.rotation, rot, Time.deltaTime * damping);
+        }
         if (patrolling && agent.velocity.sqrMagnitude >= (0.2f * 0.2f) && agent.remainingDistance <= 0.5f) 
             // Magnitude 는 피타고라스정리로 인해 제곱 + 제곱의 제곱근으로 대각선 벡터를 구하는데 말했다시피 제곱근은 성능이 안좋음.
             // 매그니튜드의 제곱 과 비교대상의 제곱을 비교하는게 성능에 더 좋음

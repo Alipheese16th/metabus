@@ -855,9 +855,17 @@
       <Project>{41E725C3-0F30-7B4F-448A-B7403AD3F428}</Project>
       <Name>Unity.Timeline.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="EnemyAD.csproj">
+      <Project>{AEAE764F-6D23-BD03-0FF8-15BC4727EAAE}</Project>
+      <Name>EnemyAD</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VSCode.Editor.csproj">
       <Project>{EE9CE0AE-E714-F56B-1B80-CF796403F4E0}</Project>
       <Name>Unity.VSCode.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="StageAD.csproj">
+      <Project>{3BDA7373-1446-49DD-0128-B5AFD0228779}</Project>
+      <Name>StageAD</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
       <Project>{B5D59011-02C6-5722-2F85-CAE97664C6E0}</Project>
@@ -891,6 +899,10 @@
       <Project>{8E2FEFE7-6D8E-C0D0-2D10-9BB20CD2C4FC}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="PlayerAD.csproj">
+      <Project>{389422BA-C52F-D803-D471-4A21337304E6}</Project>
+      <Name>PlayerAD</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
       <Project>{64AE0B7D-8AC8-81CE-3DD5-29F7997EA43C}</Project>
       <Name>Unity.TextMeshPro</Name>
@@ -902,18 +914,6 @@
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{08747D1E-761A-FA8F-A134-701B73B8D057}</Project>
       <Name>UnityEditor.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="PlayerAD.csproj">
-      <Project>{389422BA-C52F-D803-D471-4A21337304E6}</Project>
-      <Name>PlayerAD</Name>
-    </ProjectReference>
-    <ProjectReference Include="StageAD.csproj">
-      <Project>{3BDA7373-1446-49DD-0128-B5AFD0228779}</Project>
-      <Name>StageAD</Name>
-    </ProjectReference>
-    <ProjectReference Include="EnemyAD.csproj">
-      <Project>{AEAE764F-6D23-BD03-0FF8-15BC4727EAAE}</Project>
-      <Name>EnemyAD</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

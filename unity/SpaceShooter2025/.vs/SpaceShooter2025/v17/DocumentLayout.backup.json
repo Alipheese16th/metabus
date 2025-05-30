@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "D:\\workspace\\metabus\\unity\\SpaceShooter2025\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AEAE764F-6D23-BD03-0FF8-15BC4727EAAE}|EnemyAD.csproj|d:\\workspace\\metabus\\unity\\spaceshooter2025\\assets\\02.scripts\\enemy\\moveagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AEAE764F-6D23-BD03-0FF8-15BC4727EAAE}|EnemyAD.csproj|D:\\workspace\\metabus\\unity\\SpaceShooter2025\\assets\\02.scripts\\enemy\\moveagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AEAE764F-6D23-BD03-0FF8-15BC4727EAAE}|EnemyAD.csproj|solutionrelative:assets\\02.scripts\\enemy\\moveagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BDA7373-1446-49DD-0128-B5AFD0228779}|StageAD.csproj|d:\\workspace\\metabus\\unity\\spaceshooter2025\\assets\\02.scripts\\stage\\barrelctrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AEAE764F-6D23-BD03-0FF8-15BC4727EAAE}|EnemyAD.csproj|d:\\workspace\\metabus\\unity\\spaceshooter2025\\assets\\02.scripts\\enemy\\enemyai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEAE764F-6D23-BD03-0FF8-15BC4727EAAE}|EnemyAD.csproj|solutionrelative:assets\\02.scripts\\enemy\\enemyai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDA7373-1446-49DD-0128-B5AFD0228779}|StageAD.csproj|D:\\workspace\\metabus\\unity\\SpaceShooter2025\\assets\\02.scripts\\stage\\barrelctrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BDA7373-1446-49DD-0128-B5AFD0228779}|StageAD.csproj|solutionrelative:assets\\02.scripts\\stage\\barrelctrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -28,7 +32,7 @@
               "RelativeDocumentMoniker": "Assets\\02.Scripts\\Enemy\\MoveAgent.cs",
               "ToolTip": "D:\\workspace\\metabus\\unity\\SpaceShooter2025\\Assets\\02.Scripts\\Enemy\\MoveAgent.cs",
               "RelativeToolTip": "Assets\\02.Scripts\\Enemy\\MoveAgent.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-29T04:33:57.952Z",
               "EditorCaption": ""
@@ -36,6 +40,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "EnemyAI.cs",
+              "DocumentMoniker": "D:\\workspace\\metabus\\unity\\SpaceShooter2025\\Assets\\02.Scripts\\Enemy\\EnemyAI.cs",
+              "RelativeDocumentMoniker": "Assets\\02.Scripts\\Enemy\\EnemyAI.cs",
+              "ToolTip": "D:\\workspace\\metabus\\unity\\SpaceShooter2025\\Assets\\02.Scripts\\Enemy\\EnemyAI.cs",
+              "RelativeToolTip": "Assets\\02.Scripts\\Enemy\\EnemyAI.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwBIAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T06:06:00.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "BarrelCtrl.cs",
               "DocumentMoniker": "D:\\workspace\\metabus\\unity\\SpaceShooter2025\\Assets\\02.Scripts\\Stage\\BarrelCtrl.cs",
               "RelativeDocumentMoniker": "Assets\\02.Scripts\\Stage\\BarrelCtrl.cs",
@@ -43,8 +60,7 @@
               "RelativeToolTip": "Assets\\02.Scripts\\Stage\\BarrelCtrl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T04:42:47.803Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-29T04:42:47.803Z"
             }
           ]
         }

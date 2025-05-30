@@ -15,6 +15,10 @@ public class EnemyAI : MonoBehaviour
     public bool isDie;
     public float dist;
     private MoveAgent moveAgent;
+    private Animator animator;
+    private EnemyFire enemyFire;
+    private readonly int hashMove = Animator.StringToHash("isMove");
+    private readonly int hashSpeed = Animator.StringToHash("speed");
 
     private void Awake()
     {
@@ -22,6 +26,8 @@ public class EnemyAI : MonoBehaviour
         if (player != null) playerTr = player.transform;
         enemyTr = transform;
         moveAgent = GetComponent<MoveAgent>();
+        animator = GetComponent<Animator>();
+        enemyFire = GetComponent<EnemyFire>();
         ws = new WaitForSeconds(0.3f);
 
     }
@@ -56,17 +62,28 @@ public class EnemyAI : MonoBehaviour
             {
                 case State.PATROL:
                     moveAgent.patrolling = true;
+                    animator.SetBool(hashMove, true);
+                    if (enemyFire.isFire) enemyFire.isFire = false;
                     break;
                 case State.TRACE:
                     moveAgent.traceTarget = playerTr.position;
+                    animator.SetBool(hashMove, true);
+                    if (enemyFire.isFire) enemyFire.isFire = false;
                     break;
                 case State.ATTACK:
                     moveAgent.Stop();
+                    animator.SetBool(hashMove, false);
+                    if (!enemyFire.isFire) enemyFire.isFire = true;
                     break;
                 case State.DIE:
                     moveAgent.Stop();
                     break;
             }
         }
+    }
+
+    private void Update()
+    {
+        animator.SetFloat(hashSpeed, moveAgent.speed);
     }
 }

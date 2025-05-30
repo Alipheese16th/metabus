@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\02.Scripts\Enemy\EnemyAI.cs" />
+    <Compile Include="Assets\02.Scripts\Enemy\EnemyFire.cs" />
     <Compile Include="Assets\02.Scripts\Enemy\MoveAgent.cs" />
   </ItemGroup>
   <ItemGroup>
