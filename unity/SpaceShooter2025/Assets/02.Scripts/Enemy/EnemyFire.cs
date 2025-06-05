@@ -17,11 +17,13 @@ public class EnemyFire : MonoBehaviour
     private float nextFireTime = 0f;
     private readonly float fireRate = 0.1f;
     private readonly float damping = 10f;
-    private readonly float reloadTime = 2f;
+    private readonly float reloadTime = 1f;
     private readonly int maxBullet = 10;
     private int currBullet = 10;
     private bool isReload;
     private WaitForSeconds wsReload;
+    public GameObject bullet;
+    public Transform firePos;
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +56,10 @@ public class EnemyFire : MonoBehaviour
     {
         _anim.SetTrigger(hashFire);
         _audio.PlayOneShot(fireSfx, 1.0f);
+
+        GameObject _bullet = Instantiate(bullet, firePos.position, firePos.rotation);
+        Destroy(_bullet, 3.0f);
+
         //if (--currBullet == 0) { isReload = true; }
         isReload = --currBullet == 0;
         if (isReload)
@@ -65,8 +71,11 @@ public class EnemyFire : MonoBehaviour
     IEnumerator Reloading()
     {
         _anim.SetTrigger(hashReload);
+        yield return wsReload;
+
         _audio.PlayOneShot(reloadSfx, 1.0f);
         yield return wsReload;
+
         currBullet = maxBullet;
         isReload = false;
     }
